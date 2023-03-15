@@ -20,12 +20,12 @@ const ContactList = () => {
     const filteredContacts = getFilteredContacts();
     
     return (
-    <ul>{filteredContacts.map(({ id, name, number }) => (
-        <Contact key={id}>
-            <ContactInfo>{name}: {number}</ContactInfo>
-            <DeleteButton onClick={() => {deleteContactById(id)}}>Delete</DeleteButton>
-        </Contact>))}
-    </ul>
+        <ul>{filteredContacts.map(({ id, name, number }) => (
+            <Contact key={id}>
+                <ContactInfo>{name}: {number}</ContactInfo>
+                <DeleteButton onClick={() => { deleteContactById(id) }}>Delete</DeleteButton>
+            </Contact>))}
+        </ul>
     )
 }
 
